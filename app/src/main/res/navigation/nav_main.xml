@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/firstHomeFragment">
+
+    <fragment
+        android:id="@+id/firstHomeFragment"
+        tools:layout="@layout/first_home_fragment"
+        android:name="org.gsm.software.androidnavigationgcomponent.FirstHomeFragment"
+        android:label="FirstHomeFragment" >
+        <action
+            android:id="@+id/action_firstHomeFragment_to_secondHomeFragment"
+            app:destination="@id/secondHomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/secondHomeFragment"
+        tools:layout="@layout/second_home_fragment"
+        android:name="org.gsm.software.androidnavigationgcomponent.SecondHomeFragment"
+        android:label="SecondHomeFragment" >
+        <action
+            android:id="@+id/action_secondHomeFragment_to_thirdHomeFragment"
+            app:destination="@id/thirdHomeFragment" />
+        <action
+            android:id="@+id/action_secondHomeFragment_to_firstHomeFragment"
+            app:destination="@id/firstHomeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/thirdHomeFragment"
+        tools:layout="@layout/third_home_fragment"
+        android:name="org.gsm.software.androidnavigationgcomponent.ThirdHomeFragment"
+        android:label="ThirdHomeFragment" >
+        <action
+            android:id="@+id/action_thirdHomeFragment_to_secondHomeFragment"
+            app:destination="@id/secondHomeFragment" />
+    </fragment>
+
+</navigation>
